@@ -1,12 +1,13 @@
+import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { Map } from 'maplibre-gl';
 
 
 @Component({
   selector: 'stadiamaps-angular-example-map',
-  templateUrl: './map.component.html',
-  styles: [
-  ]
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './map.component.html'
 })
 export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
   map: Map | undefined;
